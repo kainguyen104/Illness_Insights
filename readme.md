@@ -12,3 +12,7 @@ We aim to create awareness about common health conditions and empower users to m
 
 - Developed a web-based application to analyze user symptoms and provide insights into potential health conditions, promoting early illness recognition and preventive care.
 - Implemented features to educate users on common health conditions while empowering them to make informed decisions about their well-being.
+
+### Website Link:
+[Illness_insight](affable-eggshell-television-124.vscode.app)
+
