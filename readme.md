@@ -14,5 +14,5 @@ We aim to create awareness about common health conditions and empower users to m
 - Implemented features to educate users on common health conditions while empowering them to make informed decisions about their well-being.
 
 ### Website Link:
-[Illness_insight](affable-eggshell-television-124.vscode.app)
+[Illness_insight](https://affable-eggshell-television-124.vscodeedu.app/)
 
