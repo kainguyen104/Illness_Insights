@@ -6,7 +6,7 @@ Illness Insights is designed to help users identify potential illnesses by analy
 
 Although our tool offers valuable insights, consulting a healthcare professional remains essential for accurate diagnosis and treatment.
 
-We aim to create awareness about common health conditions and empower users to make informed decisions regarding their well-being.]
+We aim to create awareness about common health conditions and empower users to make informed decisions regarding their well-being.
 
 ### Primary Features
 
