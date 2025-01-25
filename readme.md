@@ -10,5 +10,5 @@ We aim to create awareness about common health conditions and empower users to m
 
 ### Primary Features
 
-- [Developed a web-based application to analyze user symptoms and provide insights into potential health conditions, promoting early illness recognition and preventive care]
-- [Implemented features to educate users on common health conditions while empowering them to make informed decisions about their well-being.]
+- Developed a web-based application to analyze user symptoms and provide insights into potential health conditions, promoting early illness recognition and preventive care.
+- Implemented features to educate users on common health conditions while empowering them to make informed decisions about their well-being.
