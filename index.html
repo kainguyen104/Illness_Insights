@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Illness Insights</title>
+    <link rel="icon" href="img/healing1.ico" type="image/x-icon">
+    <link href="reset.css" rel="stylesheet" type="text/css" />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header-container">
+        <h1>ILLNESS INSIGHTS</h1>
+        <h3>Your partner in understanding symptoms and preventive care</h3>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#impact">Impact</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><button id="theme-button">Toggle Dark Mode</button></li>
+            <button id="reduce-motion-button">Reduce Motion</button>
+        </ul>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="content-section revealable">
+        <h2>About My Topic</h2>
+        <p>Illness Insights is designed to help users identify potential illnesses by analyzing their symptoms. Our goal is to provide a resource for recognizing health issues early and taking preventive measures.</p>
+        <p>Although our tool offers valuable insights, consulting a healthcare professional remains essential for accurate diagnosis and treatment.</p>
+        <p>We aim to create awareness about common health conditions and empower users to make informed decisions regarding their well-being.</p>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="content-section alt-background revealable">
+        <h2>Impact</h2>
+        <p>Understanding the impact of illnesses can help us take preventive actions and manage our health more effectively. Below are visual examples highlighting common health challenges:</p>
+        <div class="images">
+            <figure>
+                <img src="img/illness.jpg" alt="Chart showing prevalence of illnesses" class="impact-image" />
+                <figcaption>Prevalence of common illnesses in various age groups.</figcaption>
+            </figure>
+            <figure>
+                <img src="img/illness1.jpg" alt="Healthy versus unhealthy lifestyle choices" class="impact-image" />
+                <figcaption>Comparison of healthy and unhealthy lifestyle choices.</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- Petition Section -->
+    <div class="petition" id="petition">
+        <h2>Sign Our Petition 📢</h2>
+        <div class="petition-container revealable">
+            <div class="petition-para">
+                <p>Imagine having access to tools that can detect potential illnesses early and empower you with actionable health insights. Many individuals around the world lack the resources to recognize and manage health issues before they become critical. We believe that everyone deserves the opportunity to improve their health outcomes through awareness and preventive care.</p>
+                <p>By signing this petition, you can help us advocate for better access to health education, symptom analysis tools, and preventive care initiatives for all communities. Together, we can promote health equity and save lives.</p>
+            </div>
+
+            <!-- Existing Signatures Section -->
+            <div class="signatures">
+                <p>🖊️ Alex from Boston supports this.</p>
+                <p>🖊️ Jamie from Denver supports this.</p>
+                <p>🖊️ Pat from Miami supports this.</p>
+                <p id="counter">🖊️ 3 people have signed this petition and support this cause.</p>
+            </div>
+        </div>
+
+        <!-- Sign Petition Form -->
+        <form id="sign-petition">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="hometown">Hometown:</label>
+            <input type="text" id="hometown" name="hometown" placeholder="Your Hometown" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <button type="submit" id="sign-now-button">Sign Now</button>
+        </form>
+    </div>
+    <!-- Modal -->
+<!-- Modal -->
+<div id="thanks-modal" class="modal" style="display: none;">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div id="modal-text-container">
+            <p id="thanks-content-modal">Thank you for signing the petition! Your support means the world to us.</p>
+            <!-- New button inside modal -->
+            <button id="scale-image-button" class="modal-action-button">Scale Image</button>
+            <!-- Close button -->
+            <button id="close-modal-button" aria-label="Close Modal">Close</button>
+        </div>
+        <!-- Image -->
+        <img src="img/thankyou.jpg" alt="Thank you for your support!" />
+    </div>
+</div>
+
+    <!-- Video Section -->
+    <section id="video" class="content-section revealable">
+        <h2>Watch Our Video on Illness Prevention</h2>
+        <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube-nocookie.com/embed/DIsXgCdOFuY?si=8Ym4Cr_QGbyJIZbJ" 
+            title="YouTube video player" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="content-section revealable">
+        <h2>Additional Resources on Illness Prevention</h2>
+        <article>
+            <h3><a href="https://www.cdc.gov/flu/prevent/index.html" target="_blank">How to Prevent the Flu</a></h3>
+            <p>This article from the CDC provides essential tips on how to prevent the flu, including vaccination and hygiene practices.</p>
+        </article>
+        <article>
+            <h3><a href="https://www.who.int/news-room/fact-sheets/detail/healthy-diet" target="_blank">Healthy Diet for Disease Prevention</a></h3>
+            <p>The World Health Organization explains how a balanced diet helps prevent chronic diseases, improving overall health and immunity.</p>
+        </article>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>© 2024 Illness Insights. All Rights Reserved.</p>
+        <p>
+            <a href="https://www.cdc.gov" target="_blank">CDC</a> |
+            <a href="https://www.who.int" target="_blank">WHO</a>
+        </p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

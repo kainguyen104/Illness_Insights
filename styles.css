@@ -1,0 +1,351 @@
+body {
+    background-color: #f4f4f9;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2em;
+    margin: 5px;
+}
+
+header h3 {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+.navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.navbar li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: #333;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.navbar a:hover {
+    color: #007BFF;
+    font-weight: bold;
+}
+
+/* Content Section Styles */
+.content-section {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.alt-background {
+    background-color: #f9f9f9;
+}
+
+.impact-image {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Video Styles */
+iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border: none;
+}
+
+/* Button Styles */
+#theme-button {
+    padding: 10px 15px;
+    font-size: 1em;
+    background-color: #30b530;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#theme-button:hover {
+    background-color: #45a049;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #181818;
+    color: #f1f1f1;
+}
+
+.dark-mode header {
+    background-color: #333;
+    color: #f1f1f1;
+}
+
+.dark-mode .navbar {
+    background-color: #222;
+    border-bottom: 1px solid #444;
+}
+
+.dark-mode .navbar a {
+    color: #f1f1f1;
+}
+
+.dark-mode .navbar a:hover {
+    color: #4CAF50;
+}
+
+.dark-mode .content-section {
+    background: #333;
+    color: #f1f1f1;
+}
+
+.dark-mode footer {
+    background-color: #222;
+    color: #bbb;
+}
+
+/* Petition Form Styles */
+.petition {
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 780px;
+    border: 1px solid #1f1a1a;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: black;
+}
+
+.petition-container {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.petition-para {
+    width: 55%;
+    padding-right: 10px;
+    color: black;
+}
+
+.signatures {
+    width: 45%;
+    padding-right: 10px;
+    color: black;
+}
+
+#sign-petition input,
+#sign-now-button {
+    display: block;
+    width: 90%;
+    margin: 4px auto;
+    padding: 10px;
+}
+
+/* Button and Input Styles */
+#sign-now-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#sign-now-button:hover {
+    background-color: #45a049;
+}
+
+/* Error Styles */
+.error {
+    border: 2px solid red;
+    background: #fdd;
+}
+
+input {
+    margin: 5px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Input Focus Styles */
+input:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(72, 212, 128, 0.7);
+}
+
+/* Dark Mode Input Focus Styles */
+.dark-mode input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(72, 212, 128, 0.7);
+}
+
+/* Styling for Error Messages */
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+/* Signature Section Styling */
+.signatures p {
+    margin: 10px 0;
+    padding: 8px;
+    background-color: #f4f4f9;
+    border-radius: 5px;
+}
+
+.signatures p:last-child {
+    margin-bottom: 0;
+}
+
+/* Make sure the buttons have good accessibility contrast */
+#theme-button:focus,
+#sign-now-button:focus {
+    outline: 3px solid #4CAF50;
+}
+/* Base style for revealable elements */
+.revealable {
+    position: relative; 
+    transform: translateY(150px); 
+    opacity: 0; 
+    transition: all 2s ease; 
+}
+
+/* Active class for revealable elements */
+.revealable.active {
+    transform: translateY(0px); 
+    opacity: 1; 
+}
+.navbar {
+    position: sticky; 
+    top: 0;
+    z-index: 1000; 
+    background-color: white; 
+}
+#reduce-motion-button {
+    background-color: green;
+    color: white;             
+    font-size: 16px;          
+    padding: 10px 20px;     
+    border: none;            
+    border-radius: 5px;     
+    cursor: pointer;        
+    transition: background-color 0.3s ease; 
+}
+.content-section {
+    transition: opacity 2s ease-in-out;
+}
+
+.reduce-motion * {
+    transition: none !important;  /* Disable transitions */
+    animation: none !important;    /* Disable animations */
+}
+/* the modal that covers the background and prevents user interactions */
+.modal {
+    display: flex; /* hides the modal from view by default*/
+    position: fixed; /* keeps the modal in one place */
+    z-index: 2; /* positions the modal on top of all other elements on the screen */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0,0,0,0.4); /* 40% opacity black - other elements can still be seen */
+    flex-direction: column; /* these flexbox rules center the content on the screen */
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* box that contains all the content and images */
+  .modal-content {
+    background-color: lightsteelblue; /* update the colors and font sizes as you like */
+    color: black;
+    text-align: center;
+    font-size: 3rem;
+    display: flex; /* adds flexbox to center all items */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #thanks-modal-content {
+    width: 20rem; /* sets a default width for the text container */
+  }
+  
+  #modal-text-container {
+    display: flex; /* adds flexbox to center the text and buttons (stretch feature) */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #thanks-modal img {
+    transition: transform 0.3s ease-in-out; /* Smooth scaling animation */
+}
+/* Button styling */
+.modal-action-button {
+    background-color: #4CAF50; /* Green color */
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.modal-action-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+
