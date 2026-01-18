@@ -9,6 +9,61 @@ const toggleDarkMode = () => {
 // Register a 'click' event listener for the theme button
 themeButton.addEventListener("click", toggleDarkMode);
 
+// AI Suggestions Database
+const healthSuggestions = {
+    "fever": ["Drink plenty of water", "Rest and get adequate sleep", "Use fever reducers like paracetamol", "Monitor your temperature regularly"],
+    "cough": ["Stay hydrated", "Use honey or cough drops", "Avoid irritants like smoke", "Consider a humidifier"],
+    "headache": ["Rest in a dark room", "Apply cold or warm compress", "Stay hydrated", "Avoid caffeine"],
+    "fatigue": ["Get 7-8 hours of sleep", "Exercise regularly", "Eat balanced meals", "Manage stress levels"],
+    "nausea": ["Eat small, frequent meals", "Avoid heavy foods", "Stay hydrated with ginger tea", "Rest and relax"],
+    "body ache": ["Gentle stretching", "Warm baths", "Massage affected areas", "Stay active but avoid strenuous exercise"],
+    "cold": ["Consume vitamin C rich foods", "Get plenty of rest", "Use saline nasal drops", "Gargle with salt water"],
+    "sore throat": ["Drink warm liquids", "Use throat lozenges", "Gargle with salt water", "Avoid smoking and polluted air"]
+};
+
+// Function to provide AI suggestions based on user input
+const getAISuggestions = (inputText) => {
+    const suggestionsContainer = document.getElementById("suggestions-container");
+    const suggestionsList = document.getElementById("suggestions-list");
+    
+    if (!inputText || inputText.trim().length < 2) {
+        suggestionsContainer.style.display = "none";
+        return;
+    }
+
+    const lowerInput = inputText.toLowerCase();
+    let matchedSuggestions = [];
+
+    // Search for matching keywords in the suggestions database
+    for (const [keyword, suggestions] of Object.entries(healthSuggestions)) {
+        if (keyword.includes(lowerInput) || lowerInput.includes(keyword)) {
+            matchedSuggestions = suggestions;
+            break;
+        }
+    }
+
+    if (matchedSuggestions.length > 0) {
+        suggestionsList.innerHTML = "";
+        matchedSuggestions.forEach(suggestion => {
+            const li = document.createElement("li");
+            li.textContent = "✓ " + suggestion;
+            suggestionsList.appendChild(li);
+        });
+        suggestionsContainer.style.display = "block";
+    } else {
+        suggestionsContainer.style.display = "none";
+    }
+};
+
+// Add event listeners to form inputs for real-time suggestions
+const nameInput = document.getElementById("name");
+const hometownInput = document.getElementById("hometown");
+const emailInput = document.getElementById("email");
+
+nameInput.addEventListener("input", (e) => getAISuggestions(e.target.value));
+hometownInput.addEventListener("input", (e) => getAISuggestions(e.target.value));
+emailInput.addEventListener("input", (e) => getAISuggestions(e.target.value));
+
 // Signature count
 let count = 3; // Starting count of signatures
 

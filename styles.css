@@ -348,4 +348,51 @@ input:focus {
     background-color: #45a049; /* Darker green on hover */
 }
 
+/* AI Suggestions Styling */
+.suggestions-container {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #e8f5e9;
+    border-left: 4px solid #4CAF50;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
+.suggestions-title {
+    font-weight: bold;
+    color: #2e7d32;
+    margin: 0 0 10px 0;
+    font-size: 0.95em;
+}
+
+.suggestions-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.suggestions-list li {
+    padding: 8px 0;
+    color: #555;
+    border-bottom: 1px solid #c8e6c9;
+    font-size: 0.9em;
+}
+
+.suggestions-list li:last-child {
+    border-bottom: none;
+}
+
+/* Dark mode styling for suggestions */
+body.dark-mode .suggestions-container {
+    background-color: #1b5e20;
+    border-left-color: #81c784;
+}
+
+body.dark-mode .suggestions-title {
+    color: #a5d6a7;
+}
+
+body.dark-mode .suggestions-list li {
+    color: #c8e6c9;
+    border-bottom-color: #2e7d32;
+}
