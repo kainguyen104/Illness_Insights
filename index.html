@@ -34,6 +34,45 @@
         <p>We aim to create awareness about common health conditions and empower users to make informed decisions regarding their well-being.</p>
     </section>
 
+    <!-- Symptom Checker Section -->
+    <section id="symptom-checker" class="content-section revealable">
+        <h2>Check Your Symptoms 🔍</h2>
+        <p>Enter your symptoms below and get AI-powered health advice and suggestions. Remember to consult a healthcare professional for accurate diagnosis.</p>
+        
+        <div class="symptom-checker-container">
+            <div class="symptom-input-box">
+                <label for="symptom-input">Enter your symptom:</label>
+                <input 
+                    type="text" 
+                    id="symptom-input" 
+                    name="symptom-input" 
+                    placeholder="e.g., fever, cough, headache, fatigue..." 
+                    autocomplete="off"
+                >
+                <button type="button" id="check-symptom-btn" class="check-btn">Check Symptom</button>
+            </div>
+
+            <!-- AI Suggestions Results -->
+            <div id="symptom-results" class="symptom-results" style="display: none;">
+                <div class="results-content">
+                    <h3 id="symptom-title"></h3>
+                    <div class="advice-section">
+                        <p class="section-label">💡 Health Advice & Recommendations:</p>
+                        <ul id="advice-list" class="advice-list"></ul>
+                    </div>
+                    <div class="warning-box">
+                        <p><strong>⚠️ Important:</strong> This tool provides general information only. Please consult a healthcare professional for proper diagnosis and treatment.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- No Match Message -->
+            <div id="no-match-message" class="no-match-message" style="display: none;">
+                <p>We don't have information for that symptom yet. Try common symptoms like: fever, cough, headache, fatigue, nausea, body ache, cold, or sore throat.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Impact Section -->
     <section id="impact" class="content-section alt-background revealable">
         <h2>Impact</h2>

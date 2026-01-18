@@ -11,15 +11,72 @@ themeButton.addEventListener("click", toggleDarkMode);
 
 // AI Suggestions Database
 const healthSuggestions = {
-    "fever": ["Drink plenty of water", "Rest and get adequate sleep", "Use fever reducers like paracetamol", "Monitor your temperature regularly"],
-    "cough": ["Stay hydrated", "Use honey or cough drops", "Avoid irritants like smoke", "Consider a humidifier"],
-    "headache": ["Rest in a dark room", "Apply cold or warm compress", "Stay hydrated", "Avoid caffeine"],
-    "fatigue": ["Get 7-8 hours of sleep", "Exercise regularly", "Eat balanced meals", "Manage stress levels"],
-    "nausea": ["Eat small, frequent meals", "Avoid heavy foods", "Stay hydrated with ginger tea", "Rest and relax"],
-    "body ache": ["Gentle stretching", "Warm baths", "Massage affected areas", "Stay active but avoid strenuous exercise"],
-    "cold": ["Consume vitamin C rich foods", "Get plenty of rest", "Use saline nasal drops", "Gargle with salt water"],
-    "sore throat": ["Drink warm liquids", "Use throat lozenges", "Gargle with salt water", "Avoid smoking and polluted air"]
+    "fever": ["Drink plenty of water and stay hydrated", "Rest and get adequate sleep", "Use fever reducers like paracetamol or ibuprofen as needed", "Monitor your temperature regularly", "Apply cool compresses to your forehead"],
+    "cough": ["Stay hydrated with warm water and herbal tea", "Use honey or cough drops to soothe your throat", "Avoid irritants like smoke and cold air", "Consider using a humidifier to add moisture to the air", "Elevate your head while sleeping"],
+    "headache": ["Rest in a dark, quiet room", "Apply cold or warm compress to your head or neck", "Stay hydrated and drink plenty of water", "Avoid caffeine and alcohol", "Practice relaxation and breathing exercises"],
+    "fatigue": ["Get 7-8 hours of quality sleep every night", "Exercise regularly with moderate activity", "Eat balanced meals with protein and nutrients", "Manage stress through meditation or yoga", "Take short breaks during work"],
+    "nausea": ["Eat small, frequent meals instead of large ones", "Avoid heavy, greasy, or spicy foods", "Stay hydrated with ginger tea or lemon water", "Rest and avoid sudden movements", "Breathe fresh air and avoid strong odors"],
+    "body ache": ["Gentle stretching and light movement", "Warm baths or showers to relax muscles", "Massage affected areas gently", "Stay active but avoid strenuous exercise", "Use over-the-counter pain relief if needed"],
+    "cold": ["Consume vitamin C rich foods like citrus fruits", "Get plenty of rest and sleep", "Use saline nasal drops or spray", "Gargle with salt water for throat relief", "Drink warm liquids like tea and broth"],
+    "sore throat": ["Drink warm liquids like tea with honey", "Use throat lozenges or sugar-free candy", "Gargle with salt water 2-3 times daily", "Avoid smoking and secondhand smoke", "Get plenty of rest to help recovery"],
+    "stomach ache": ["Eat bland foods like rice and toast", "Avoid dairy, fatty, and spicy foods", "Stay hydrated with water or electrolyte drinks", "Rest and avoid strenuous activity", "Try ginger tea or peppermint to ease digestion"],
+    "dizziness": ["Sit or lie down until it passes", "Avoid sudden movements or position changes", "Stay hydrated and drink water", "Avoid heights and operating machinery", "Focus on a fixed point to regain balance"]
 };
+
+// Function to check symptoms and show AI suggestions
+const checkSymptom = () => {
+    const symptomInput = document.getElementById("symptom-input");
+    const inputValue = symptomInput.value.trim().toLowerCase();
+    const resultsDiv = document.getElementById("symptom-results");
+    const noMatchDiv = document.getElementById("no-match-message");
+    const symptomTitle = document.getElementById("symptom-title");
+    const adviceList = document.getElementById("advice-list");
+
+    // Clear previous results
+    resultsDiv.style.display = "none";
+    noMatchDiv.style.display = "none";
+
+    if (!inputValue || inputValue.length < 2) {
+        noMatchDiv.style.display = "block";
+        noMatchDiv.innerHTML = "<p>Please enter a symptom to check.</p>";
+        return;
+    }
+
+    // Search for matching symptoms
+    let foundMatch = false;
+    for (const [symptom, advice] of Object.entries(healthSuggestions)) {
+        if (symptom.includes(inputValue) || inputValue.includes(symptom)) {
+            foundMatch = true;
+            // Display results
+            symptomTitle.textContent = `Advice for ${symptom.charAt(0).toUpperCase() + symptom.slice(1)}`;
+            
+            adviceList.innerHTML = "";
+            advice.forEach(tip => {
+                const li = document.createElement("li");
+                li.textContent = tip;
+                adviceList.appendChild(li);
+            });
+
+            resultsDiv.style.display = "block";
+            break;
+        }
+    }
+
+    if (!foundMatch) {
+        noMatchDiv.style.display = "block";
+        noMatchDiv.innerHTML = `<p>We don't have specific advice for "<strong>${inputValue}</strong>" yet. Try common symptoms like: fever, cough, headache, fatigue, nausea, body ache, cold, sore throat, stomach ache, or dizziness.</p>`;
+    }
+};
+
+// Event listener for the check symptom button
+document.getElementById("check-symptom-btn").addEventListener("click", checkSymptom);
+
+// Allow Enter key to check symptom
+document.getElementById("symptom-input").addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+        checkSymptom();
+    }
+});
 
 // Function to provide AI suggestions based on user input
 const getAISuggestions = (inputText) => {

@@ -396,3 +396,197 @@ body.dark-mode .suggestions-list li {
     color: #c8e6c9;
     border-bottom-color: #2e7d32;
 }
+/* Symptom Checker Styling */
+.symptom-checker-container {
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.symptom-input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.symptom-input-box label {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.05em;
+}
+
+.symptom-input-box input {
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.symptom-input-box input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+.check-btn {
+    padding: 12px 30px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.check-btn:hover {
+    background-color: #45a049;
+}
+
+.check-btn:active {
+    transform: scale(0.98);
+}
+
+/* Symptom Results */
+.symptom-results {
+    background-color: #f0f8f0;
+    border-left: 5px solid #4CAF50;
+    padding: 20px;
+    border-radius: 6px;
+    margin-top: 20px;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.results-content h3 {
+    color: #2e7d32;
+    margin-top: 0;
+    font-size: 1.3em;
+}
+
+.section-label {
+    font-weight: bold;
+    color: #2e7d32;
+    margin-bottom: 12px;
+    font-size: 1.05em;
+}
+
+.advice-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.advice-list li {
+    padding: 10px 0;
+    color: #555;
+    border-bottom: 1px solid #c8e6c9;
+    line-height: 1.6;
+}
+
+.advice-list li:last-child {
+    border-bottom: none;
+}
+
+.advice-list li:before {
+    content: "✓ ";
+    color: #4CAF50;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.warning-box {
+    background-color: #fff3cd;
+    border: 1px solid #ffc107;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 20px;
+    color: #856404;
+}
+
+.warning-box p {
+    margin: 0;
+    font-size: 0.95em;
+}
+
+.no-match-message {
+    background-color: #e3f2fd;
+    border-left: 5px solid #2196F3;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 20px;
+    color: #1565c0;
+    animation: slideIn 0.3s ease;
+}
+
+/* Dark mode for symptom checker */
+body.dark-mode .symptom-checker-container {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .symptom-input-box label {
+    color: #e0e0e0;
+}
+
+body.dark-mode .symptom-input-box input {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+body.dark-mode .symptom-input-box input:focus {
+    border-color: #81c784;
+    box-shadow: 0 0 5px rgba(129, 199, 132, 0.3);
+}
+
+body.dark-mode .symptom-results {
+    background-color: #1b5e20;
+    border-left-color: #81c784;
+}
+
+body.dark-mode .results-content h3 {
+    color: #a5d6a7;
+}
+
+body.dark-mode .section-label {
+    color: #a5d6a7;
+}
+
+body.dark-mode .advice-list li {
+    color: #c8e6c9;
+    border-bottom-color: #2e7d32;
+}
+
+body.dark-mode .advice-list li:before {
+    color: #81c784;
+}
+
+body.dark-mode .warning-box {
+    background-color: #4a3b0a;
+    border-color: #ffa000;
+    color: #ffe082;
+}
+
+body.dark-mode .no-match-message {
+    background-color: #0d47a1;
+    border-left-color: #42a5f5;
+    color: #90caf9;
+}
